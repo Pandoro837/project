@@ -9,19 +9,36 @@
 </head>
 <body>
 	<div id=content>
-		<p>로그인</p>
-		<form action="${pageContext.request.contextPath }/user/login">
-			<div id="uid-form">
-				<p>아이디</p>
-				<input type="text" name="userId" value="" placeholder="아이디를 입력해주세요">
-			</div>
-			
-			<div id="upw-form">
-				<p>패스워드</p>
-				<input type="text" name="userPw" value="" placeholder="비밀번호를 입력해주세요">
-				<button type="submit">로그인</button>
-			</div>
-			
+		<form action="${pageContext.request.contextPath }/user/login" method="get">
+			<table>
+				<tr>
+					<td>
+						<p>로그인</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div id="uid-form">
+							<label for="loginId">아이디</label> 
+							<input id="loginId" type="text" name="userId" value="" placeholder="아이디를 입력해주세요">
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<div id="upw-form">
+							<label for="loginPw">비밀번호</label> 
+							<input id="loginPw" type="text" name="userPw" value="" placeholder="비밀번호를 입력해주세요">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="submit">로그인</button>
+					</td>
+				</tr>
+			</table>
 		</form>
 	</div>
 	<!-- content -->
